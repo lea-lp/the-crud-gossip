@@ -1,0 +1,16 @@
+<div class="row">
+
+  <%= @all_gossips.each do |gossip| %>
+
+  <div class="card col-4">
+
+    <div class="card-body">
+
+      <h5 class="card-title"><%= gossip.title %></h5>
+        <p class="card-text mb-0"><%= gossip.content %></p>
+          <p class="card-text mb-0"><em>written by <%= gossip.anonymous_gossiper %></em></p>
+
+</div>
+</div>
+<% end %>
+</div>

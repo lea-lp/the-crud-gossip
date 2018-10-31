@@ -1,0 +1,22 @@
+<br><br><br><br>
+
+
+<%= form_for @gossip do |gossip| -%>
+
+
+    <div class="form-group">
+      <%= gossip.label "Title" %>
+      <%= gossip.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= gossip.label "Tell us everything..." %>
+      <%= gossip.text_area :content, class: "form-control" %>
+    </div>
+
+    <%= gossip.submit class: "btn btn-primary" %>
+    <%# <button class="btn btn-primary" type="submit">Enregistrer</button> %>
+
+  <% end -%>
+
+</form>

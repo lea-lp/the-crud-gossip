@@ -2,7 +2,7 @@
 
 <h1 class="text-center">Thanks <%= @gossip.anonymous_gossiper %></h1>
 <br>
-<h3 class="text-center">You're in the crew now ! </h3><br>
+<h3 class="text-center">Feels good, right ?</h3><br>
 <br><br>
 
 <h5 class="text-center"><%= @gossip.title %></h5>
@@ -14,8 +14,8 @@
 <br><br>
 
 <div class="text-center">
-<%= link_to "Add comment", "#{@gossip.id}/comments/new", class: "btn btn-outline-info", role: "button" %>
-<%= link_to "Edit", "#{@gossip.id}/edit", class: "btn btn-outline-success", role: "button" %>
+<%= link_to "Add comment", new_user_gossip_comment_path(@user.id, @gossip.id), class: "btn btn-outline-info", role: "button" %>
+<%= link_to "Edit", edit_user_gossip_path(@user.id, @gossip.id), class: "btn btn-outline-success", role: "button" %>
             <a href="<%= @gossip.id %>" class="btn btn-outline-danger" role="button" data-confirm="Are you sure ?" data-method="DELETE">Delete</a>
 </div>
 

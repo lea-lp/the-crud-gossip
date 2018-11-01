@@ -1,7 +1,7 @@
 <br><br><br><br>
 
 
-<%= form_for @gossip do |gossip| -%>
+<%= form_for @gossip, :url => user_gossip_path  do |gossip| -%>
 
 
     <div class="form-group">
@@ -15,7 +15,7 @@
     </div>
 
     <%= gossip.submit class: "btn btn-primary" %>
-    <%# <button class="btn btn-primary" type="submit">Enregistrer</button> %>
+
 
   <% end -%>
 

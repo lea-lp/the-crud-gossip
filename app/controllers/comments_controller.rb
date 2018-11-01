@@ -5,13 +5,14 @@ class CommentsController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
+    @gossip = Gossip.find(params[:gossip_id])
     new_comment = Comment.create(comment_params)
-    puts "Les COMMENT PARAMS = #{comment_params}"
-    redirect_to(gossip_path(params[:gossip_id]))
+    redirect_to(user_gossip_path(@user.id, @gossip.id))
   end
 
   def show 
-    p @comment = Comment.find(params[:gossip_id])
+    @comment = Comment.find(params[:gossip_id])
   end 
 
 

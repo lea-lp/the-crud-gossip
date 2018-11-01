@@ -1,4 +1,11 @@
+
+<br>
+<a href="<%= new_gossip_path %>" role="button" class="btn btn-info btn-lg btn-block">Create your own gossip here</a>
+
+<div class="navbar">
+
 <div class="row">
+
 
   <% @all_gossips.each do |gossip| %>
 
@@ -8,10 +15,18 @@
 
       <h5 class="card-title"><%= gossip.title %></h5>
         <p class="card-text mb-0"><%= gossip.content %></p>
-          <p class="card-text mb-0"><em>written by <%= gossip.anonymous_gossiper %></em></p>
+          <p class="card-text mb-0"><em>written by <%= gossip.anonymous_gossiper %></em></p><br>
+
+            <%= link_to "See more", "gossips/#{gossip.id}", class: "btn btn-outline-secondary btn-sm 30rem", role: "button" %>
+            <a href="gossips/<%= gossip.id %>" class="btn btn-outline-danger btn-sm 20rem" role="button" data-confirm="Are you sure ?" data-method="DELETE">x</a>
+            
+
 
      </div>
    </div>
 <% end %>
 
 </div>
+</div>
+
+

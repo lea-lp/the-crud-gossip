@@ -1,0 +1,17 @@
+<br><br>
+
+<%= form_for @comment, :url => gossip_comments_path do |comment| -%>
+
+    <div class="form-group">
+      <%= comment.label "Pseudo" %>
+      <%= comment.text_field :anonymous_commentor, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= comment.label "Content" %>
+      <%= comment.text_area :content, class: "form-control" %>
+    </div>
+
+    <%= comment.submit class: "btn btn-primary" %>
+
+  <% end -%>

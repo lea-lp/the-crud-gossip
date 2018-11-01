@@ -14,7 +14,9 @@ class GossipsController < ApplicationController
     end
 
     def show
-      @gossip = Gossip.find(params[:id])
+      p @gossip = Gossip.find(params[:id])
+      p @comments = @gossip.comments
+
       # @gossip = Gossip.find(params[:id])
     end
 
@@ -28,5 +30,12 @@ class GossipsController < ApplicationController
       @gossip.update(gossip_params)
       redirect_to gossips_path
     end
+
+    def destroy
+      @gossip = Gossip.find(params[:id])
+      @gossip.destroy
+      redirect_to gossips_path
+    end
+
 
   end

@@ -1,0 +1,25 @@
+<br><br><br>
+
+<div class="container">
+
+<div class="col-offset-6 centered">
+
+	<% @comments.each do |com| %>
+	
+<div class="card border-secondary mb-3" style="max-width: 20rem;">
+ <div class="card-header">Comment n°<%= com.id %></div>
+ <div class="card-body">
+   <h4 class="card-title"><%= com.anonymous_commentor %></h4>
+   <p class="card-text"><%= com.content %></p>
+ </div>
+</div>
+
+
+<% end %>
+
+
+</div>
+ <br>
+
+</div>
+

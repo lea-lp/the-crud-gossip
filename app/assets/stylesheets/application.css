@@ -5,6 +5,7 @@
 }
 
 
+
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600");
 :root {
   --blue: #007bff;
@@ -594,13 +595,13 @@ pre code {
 }
 
 .row {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+      flex-wrap: wrap; */
+  /* margin-right: -15px;
+  margin-left: -15px; */
 }
 
 .no-gutters {
@@ -2109,20 +2110,20 @@ textarea.form-control {
 }
 
 .form-row {
-  display: -webkit-box;
+/*  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-right: -5px;
-  margin-left: -5px;
+  margin-left: -5px;*/
 }
 
-.form-row > .col,
+/*.form-row > .col,
 .form-row > [class*="col-"] {
   padding-right: 5px;
   padding-left: 5px;
-}
+}*/
 
 .form-check {
   position: relative;
@@ -2475,10 +2476,10 @@ textarea.form-control {
       -ms-user-select: none;
           user-select: none;
   border: 0 solid transparent;
-  padding: 0.75rem 2rem;
+  /* padding: 0.75rem 2rem; */
   font-size: 0.875rem;
-  line-height: 1.5rem;
-  border-radius: 0;
+  /* line-height: 1.5rem; */
+  border-radius: 3;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3128,7 +3129,7 @@ fieldset:disabled a.btn {
   padding: 0.5rem 1rem;
   font-size: 0.765625rem;
   line-height: 1.5;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .btn-block {
@@ -4126,14 +4127,14 @@ input[type="button"].btn-block {
 }
 
 .nav {
-  display: -webkit-box;
+/*  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none;
+  list-style: none;*/
 
 }
 
@@ -4912,7 +4913,7 @@ input[type="button"].btn-block {
     border-radius: 0;
   }
 }
-
+/*
 .card-columns .card {
   margin-bottom: 0.75rem;
 }
@@ -4930,7 +4931,7 @@ input[type="button"].btn-block {
     display: inline-block;
     width: 100%;
   }
-}
+} */
 
 .accordion .card:not(:first-of-type):not(:last-of-type) {
   border-bottom: 0;

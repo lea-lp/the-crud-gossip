@@ -15,7 +15,7 @@
 
 	<h3>Sign in</h3>
 
-	<%= form_for @user do |user| -%>
+	<%= form_for @user, :url => registration_new_path do |user| -%>
 
     <div class="form-group">
       <%= user.label "Email" %>
@@ -27,8 +27,7 @@
       <%= user.text_field :password, class: "form-control" %>
     </div>
 <br>
-      <%= link_to "Sign in", new_user_path, class: "btn btn-danger btn", role: "button" %>
-
+<button type="submit" class="btn btn-danger">Sign in</button>
   <% end -%>
 
 </form>

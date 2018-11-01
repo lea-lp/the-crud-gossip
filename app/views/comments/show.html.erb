@@ -4,12 +4,11 @@
 
 
 
-<h1 class="text-center">Thanks <%= @comment.anonymous_commentor %></h1>
 <br>
 
 <blockquote class="blockquote text-center">
  <p class="mb-0"><%= @comment.content %></p>
- <footer class="blockquote-footer">written by <cite title="Source Title"><%= @comment.anonymous_gossiper %></cite></footer>
+ <footer class="blockquote-footer">written by <cite title="Source Title"><%= @user.name %></cite></footer>
 </blockquote>
 
 <br><br>

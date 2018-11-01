@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  post 'registration/new'
 	# get '/gossips', to: 'gossips#index'
 	get '/', to: 'users#index'
 

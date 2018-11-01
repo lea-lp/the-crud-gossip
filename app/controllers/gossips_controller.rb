@@ -8,7 +8,6 @@ class GossipsController < ApplicationController
 
     def new
       @new_gossip = Gossip.new
-      # @u = @new_gossip << User.find(params[:id])
       @user = User.find(params[:user_id])
 
       
@@ -16,23 +15,29 @@ class GossipsController < ApplicationController
 
     def create
       @user = User.find(params[:user_id])
-      @new_gossip = Gossip.create(title: params[:gossip][:title], content: params[:gossip][:content])
+      @new_gossip = Gossip.create(title: params[:gossip][:title], content: params[:gossip][:content], user_id: params[:user_id])
+
       redirect_to(user_gossip_path(@user.id, @new_gossip.id))
     end
 
     def show
-      p @gossip = Gossip.find(params[:id])
-      p @comments = @gossip.comments
+      p "................................S H O W ........................................"
+      @gossip = Gossip.find(params[:id])
+      p "ID GOSSIP >>>>>>>>>>>> #{@gossip.id}"
+      @comments = @gossip.comments
+      p "COMMENT >>>>>>>>>>>> #{@comments}"
       @user = User.find(params[:user_id])
+      p "ID USER >>>>>>>>>>>> #{@user.id}"
+      p ".................................S H O W........................................"
 
     end
 
     def edit
-      p "................................................................................"
+      p ".................................E D I T........................................"
       p @user = User.find(params[:user_id])
       p @gossip = Gossip.find(params[:id])
       # p @gossip_id = Gossip.find(params[:id])
-      p "................................................................................"
+      p "..................................E D I T......................................."
 
     end
 

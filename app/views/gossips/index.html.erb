@@ -15,7 +15,7 @@
 
       <h5 class="card-title"><%= gossip.title %></h5>
         <p class="card-text mb-0"><%= gossip.content %></p>
-          <p class="card-text mb-0"><em>written by <%= gossip.anonymous_gossiper %></em></p><br>
+          <p class="card-text mb-0"><em>written by <%= @user.name %></em></p><br>
 
           <div class="bottom">
             <%= link_to "See more", user_gossip_path(@user.id, gossip.id), class: "btn btn-outline-secondary btn-sm 30rem", role: "button" %>

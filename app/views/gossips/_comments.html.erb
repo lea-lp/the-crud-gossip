@@ -9,7 +9,7 @@
 <div class="card border-secondary mb-3" style="max-width: 20rem;">
  <div class="card-header">Comment n°<%= com.id %></div>
  <div class="card-body">
-   <h4 class="card-title"><%= com.anonymous_commentor %></h4>
+   <h4 class="card-title"><%= @user.name %></h4>
    <p class="card-text"><%= com.content %></p>
  </div>
 </div>
